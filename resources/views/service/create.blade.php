@@ -1,6 +1,6 @@
 @extends('layouts.template')
-@section('title','Dasboard')
-@section('sub-judul','Home')
+@section('title','Create Service')
+@section('sub-judul','Create')
 @section('content')
 <style>
                 .image-box{
@@ -23,7 +23,7 @@
         <form action="{{route('service.store')}}" method="POST" enctype="multipart/form-data">
         @csrf
             <div class="form-group">
-                <label>Logo</label>    
+                <label>Image</label>    
                 <input class="form-control" name="image_services" type="file" accept="image/*" onchange="loadFile(event)">
                     <div class="image-box">
                 <img id="output" alt="" width="100%">

@@ -22,9 +22,9 @@
     @csrf
       <div class="col-12">
         <label>Hero </label>
-        <input class="form-control-file" name="image" type="file" onchange="loadFile(event)">
+        <input class="form-control-file" name="image_features" type="file" onchange="loadFile(event)">
         <div class="image-box">
-          <img id="output" src={{url('gambar/'.$features->image)}} width="35%">
+          <img id="output" src={{url('gambar/'.$features->image_features)}} width="35%">
           </div>
       </div> 
       <button class="ml-3 btn btn-primary">EDIT</button>

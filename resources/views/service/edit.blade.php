@@ -1,6 +1,6 @@
 @extends('layouts.template')
-@section('title','Dasboard')
-@section('sub-judul','Home')
+@section('title','Edit Service')
+@section('sub-judul','Create')
 @section('content')
 <style>
                 .image-box{
@@ -24,7 +24,7 @@
         @csrf
         @method('PATCH')
             <div class="form-group">
-                <label>Logo</label>    
+                <label>Image</label>    
                 <input class="form-control" name="image_services" type="file" accept="image/*" onchange="loadFile(event)">
                     <div class="image-box">
                 <img id="output" alt="" width="100%" src="{{url('gambar/'.$services->image_services)}}">

@@ -71,8 +71,8 @@ class FeatureController extends Controller
     public function update(Request $request, $id)
     {
         $features = Features::find(1);
-        if($request->file('image')){
-            $file = $request->file('image');
+        if($request->file('image_features')){
+            $file = $request->file('image_features');
 
             $nama_file = time()."_".$file->getClientOriginalName();
 
@@ -80,7 +80,7 @@ class FeatureController extends Controller
             $file->move($tujuan_upload,$nama_file);
 
         $features->update([
-            'image' => $nama_file,
+            'image_features' => $nama_file,
         ]);
         }
            

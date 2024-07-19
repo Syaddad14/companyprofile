@@ -1,5 +1,5 @@
 @extends('layouts.template')
-@section('title','Dasboard')
+@section('title','Service')
 @section('sub-judul','Service')
 @section('content')
 
@@ -12,9 +12,9 @@
         <table id="tabel_costumers" class="table datatable">
             <thead>
                 <tr>
-                    <th>Logo</th>
+                    <th>Image</th>
                     <th>Title</th>
-                    <th>Description</th>
+                    <!-- <th>Description</th> -->
                     <th>Action<th>
                 </tr>
             </thead>
@@ -23,7 +23,7 @@
                 <tr>
                 <td><img src="{{url('gambar/'.$service->image_services)}}" width="50"></td>
                     <td>{{$service->title_services}}</td>
-                    <td>{{$service->desc_services}}</td>
+                    <!-- <td>{{$service->desc_services}}</td> -->
                     <td>
                     <a href="/service/{{$service->id}}/edit" class="btn btn-primary btn-sm">Edit</a>
                     <form action={{route('service.destroy',$service)}} method="POST" class="d-inline-block">

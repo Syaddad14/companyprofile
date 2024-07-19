@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | Log in</title>
+  <title>Masuk</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -21,7 +21,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="../../index2.html"><b>Baber</b>Shop</a>
+    <a href="../../index2.html"><b>Arenzha</a>
   </div>
   <!-- /.login-logo -->
   
@@ -29,7 +29,7 @@
     <div class="card-body login-card-body">
     <form method="POST" action="{{ route('login') }}">
                         @csrf
-      <p class="login-box-msg">Sign in to start your session</p>
+      <p class="login-box-msg">Masuk untuk mengakses</p>
         <div class="input-group mb-3">
           <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
           @error('email')
@@ -63,33 +63,20 @@
           <div class="col-8">
             <div class="icheck-primary">
             <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
             <label class="form-check-label" for="remember">
-            {{ __('Remember Me') }}
+            {{ __('Ingat aku') }}
             </label>
             </div>
           </div>
           <!-- /.col -->
-          <div class="col-4">
-          <button type="submit" class="btn btn-primary btn-block">
-                                    {{ __('Login') }}
+          <div class="col-12 text-center">
+          <button type="submit" class="btn btn-primary" style="height: 40px; width: 100px;">
+          {{ __('Masuk') }}
         </button>
           </div>
           <!-- /.col -->
         </div>
       </form>
-
-
-      <p class="mb-1">
-      @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('register') }}">
-                                        {{ __('Belum punya akun?') }}
-                                    </a>
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-    @endif
-    </div>
 </form>
     <!-- /.login-card-body -->
   </div>

@@ -15,6 +15,13 @@ if(window.Chart) {
   Chart.defaults.global.tooltips.cornerRadius = 3;
 }
 
+const mobileMenu = document.getElementById('mobile-menu');
+const navbarMenu = document.querySelector('.navbar-menu');
+
+mobileMenu.addEventListener('click', () => {
+    navbarMenu.classList.toggle('active');
+});
+
 // DropzoneJS
 if(window.Dropzone) {
   Dropzone.autoDiscover = false;

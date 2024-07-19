@@ -136,8 +136,10 @@
             </div>
           </li>
           <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-         
-          <div class="d-sm-none d-lg-inline-block">{{ Auth::user()->name }}</div></a>
+            @if(Auth::user())
+                <div class="d-sm-none d-lg-inline-block">{{ Auth::user()->name }}</div>
+            @endif
+          </a>
             <div class="dropdown-menu dropdown-menu-right">
               <!-- <div class="dropdown-title">Logged in 5 min ago</div>
               <a href="features-profile.html" class="dropdown-item has-icon">

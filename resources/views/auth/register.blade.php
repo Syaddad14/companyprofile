@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | Registration Page</title>
+  <title>Daftar</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -21,12 +21,12 @@
 <body class="hold-transition register-page">
 <div class="register-box">
   <div class="register-logo">
-    <a href="../../index2.html"><b>Baber</b>Shop</a>
+    <a href="../../index2.html"><b>Arenzha</a>
   </div>
 
   <div class="card">
     <div class="card-body register-card-body">
-      <p class="login-box-msg">Register a new Admin</p>
+      <p class="login-box-msg">Daftar</p>
 
       <form method="POST" action="{{ route('register') }}">
         @csrf
@@ -85,13 +85,13 @@
             <div class="icheck-primary">
               <input type="checkbox" id="agreeTerms" name="terms" value="agree">
               <label for="agreeTerms">
-               I agree to the <a href="#">terms</a>
+               Saya setuju</a>
               </label>
             </div>
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Register</button>
+            <button type="submit" class="btn btn-primary btn-block">Daftar</button>
           </div>
           <!-- /.col -->
         </div>
@@ -109,7 +109,7 @@
         </a>
       </div> -->
 
-      <a href="{{url('login')}}" class="text-center">Apakah sudah mempunyai akun?</a>
+      <a href="{{url('login')}}" class="text-center">Sudah punya akun?</a>
     </div>
     <!-- /.form-box -->
   </div><!-- /.card -->

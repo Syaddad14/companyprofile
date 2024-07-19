@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Client;
 use App\Models\Services;
+use App\Models\sendMessage;
 class DashboardController extends Controller
 {
     /**
@@ -13,8 +15,10 @@ class DashboardController extends Controller
      */
     public function index()
     {
+        $clients = Client::get();
         $services = Services::get();
-        return view('dashboard',compact('services'));
+        $send_message = sendMessage::get();
+        return view('dashboard',compact('services','send_message','clients'));
     }
 
     /**
